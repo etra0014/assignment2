@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+
+        <!-- Import pure.css -->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+             integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google font -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+   
+        <!-- CSS file -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+    </head>
+
+    <body>
+        <div class="container">
+            <span class="heading"
+				><h1>- Mental Health Around the World -</h1>
+			</span>
+
+            <div class="row" style="margin-bottom: 50px">
+				<hr style="width: 30%; margin: auto; margin-top: -50px" ; />
+				<div
+					class="col-12"
+					style="
+						padding-left: 60px;
+						font-size: 22px;
+						text-align: center;
+						padding-right: 60px;
+						margin-bottom: 40px;
+					"
+				>
+					Mental health involves aspects including psychological, emotional, and social well-being. 
+					It plays a large role in how we feel, think, and behave.
+					<b style="color: #0c3f2e"> 2.2 million Australians</b> have reported having a mental
+					health condition, according to the 2022 Australian Bureau of Statistics (ABS) data.
+				</div>
+			</div>
+
+            <div class="row">
+                <h2>Mental Disorders in Australia</h2>
+
+                <div class="col-12">
+					<div
+						style="
+							padding-right: 50px;
+							padding-left: 50px;
+							margin-bottom: 120px;
+							margin-top: 50px;
+						"
+					>
+						<p class="sub-text">
+							Does <b>prevance of mental disorders</b> change as we age?
+						</p>
+
+                        <p>
+                            The ABS defines any long-term mental disorder as any mental disorder 
+                            that has been occurring for at least 12 months. Evidently, prevalence 
+                            of mental disorders <b>decrease</b> as age <b>increases</b>. 
+                            It can also be seen that <b>Females</b> have a higher prevalence of mental health disorders than men. 
+
+                        </p>
+
+						<div class="visualisation">
+							<div id="map" class="map"></div>
+							<div class="help">
+								<i class="fas fa-mouse-pointer"></i> <b>click</b> and
+								<b>drag</b> the slider to view different years (1985 - 2019)
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+            </div>
+
+
+        </div>
+		<script type="text/javascript">
+			var spec2 = "vega/mentaldisorderbarchart.json";
+			vegaEmbed("#mentaldisorderbarchart", spec2, { actions: false })
+				.then(function (result) {
+					// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+				})
+				.catch(console.error);
+		</script>
+    </body>
+
+</html>
