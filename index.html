@@ -16,8 +16,40 @@
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
          <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
    
-        <!-- CSS file -->
+		 <!-- CSS file -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+		<!-- Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+			integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+			integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
     </head>
 
     <body>
@@ -49,8 +81,8 @@
             <div class="row">
                 <h2>Mental Disorders in Australia</h2>
 
-                <div class="pure-g">
-					<div class = "pure-u-1-1" style="
+                <div class="col-12">
+					<div style="
 					padding-right: 50px;
 					padding-left: 50px;
 					margin-bottom: 120px;
@@ -69,60 +101,22 @@
                         </p>
 
 						<div class="visualisation">
-							<div id="mentaldisorderbarchart" class = "vis-container"></div>
+							<div id="mentaldisorderbarchart" class:"map"></div>
 						</div>
 					</div>
 				</div>
 
-				    <!-- pure grid group -->
-					<div class="pure-g">
-						<div class="pure-u-1-2">
-						  <div class="description description-left">
-							<h2>Mental Health Strategies Used in Australia</h2>
-							<p> There are a variety of strategies to cope with a mental health disorder.
-								Among Australians that have mental health disorders, increasing the level of exercise and physical activity, as well practising positive thinking are 
-							among the top strategies used. Cutting out alcohol or drugs is the least prevalent strategy used. </p>
-						  </div>
-						</div>
-						<div class="pure-u-1-2">
-						  <div id="vis2" class="vis-container"></div>
-						</div>
-					  </div>
-					  <!-- end pure grid group -->
-
-
+				    
             </div>
 
-
-        </div>
-		<script type="text/javascript">
-			var mentaldisorderbarchart = "vega/mentaldisorderbarchart.json";
-			vegaEmbed("#mentaldisorderbarchart", mentaldisorderbarchart, { actions: false })
-				.then(function (result) {
-					// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-				})
-				.catch(console.error);
-		</script>
-
-<script type="text/javascript">
-    var specVis1 = "./normalised-stacked-bars-responsive.json";
-    var specVis2 = ".vega/MHStrategiesbar.json";
-
-    vegaEmbed('#vis1', specVis1, { "actions": false });
-
-    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
-</body>
+	<script type="text/javascript">
+	var spec2 = "vega/mentaldisorderbarchart.json";
+	vegaEmbed("#mentaldisorderbarchart", spec2, { actions: false })
+		.then(function (result) {
+			// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+		})
+		.catch(console.error);
+	</script>
     </body>
 
 </html>
