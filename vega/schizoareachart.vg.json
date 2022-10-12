@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 200,
+    "title": "Prevalence of Schizophrenia Worldwide",
+    "data": {"url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/WHO%20prevalence.csv"},
+    "params": [
+          {
+              "name": "region_selection",
+              "bind":{
+                  "input": "select",
+                  "options":[
+                      null, 
+                      "Eastern Mediterranean Region (WHO)",
+                      "African Region (WHO)",
+                      "European Region (WHO)",
+                      "Region of the Americas (WHO)",
+                      "South-East Asia Region (WHO)",
+                      "Western Pacific Region (WHO)"
+                  ],
+                  "labels":[
+                      "Show All", 
+                      "Eastern Mediterranean Region (WHO)",
+                      "African Region (WHO)",
+                      "European Region (WHO)",
+                      "Region of the Americas (WHO)",
+                      "South-East Asia Region (WHO)",
+                      "Western Pacific Region (WHO)"
+                  ],
+                  "name": "Region Selection"}
+  
+          }
+      ],
+      "transform": [
+          {
+              "filter": "region_selection == null || datum.Entity == region_selection"
+          }
+          
+      ],
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "timeUnit": "year", "field": "Year",
+        "axis": {"format": "%Y"},
+        "title":"Year"
+      }, 
+      "y": {
+        "aggregate": "sum", "field": "Prevalence - Schizophrenia - Sex: Both - Age: Age-standardized (Percent)",
+        "title": "Prevalence"
+      },
+      "color": {"field": "Entity", "type": "nominal", "title": "Region"},
+      "tooltip": [
+            {"field": "Entity", "type": "nominal", "title": "WHO Region"},
+            {"field": "Prevalence - Schizophrenia - Sex: Both - Age: Age-standardized (Percent)", "type": "quantitative", "title": "Prevalence of Schizophrenia (age-standardised, %)"}
+          ]
+    }
+  }

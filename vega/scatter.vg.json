@@ -1,0 +1,21 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/prevalence-by-mental-and-substance-use-disorder.csv"},
+    "transform": [{"filter":"datum.Year == 2019"},
+    {"filter":"datum.Year == 2019"}],
+    "mark": "circle",
+    "encoding": {
+      "x": {"field": "Prevalence - Alcohol use disorders - Sex: Both - Age: Age-standardized (Percent)", 
+      "type": "quantitative",
+      "title": "Prevalence of Alcohol Use Disorders",
+      "scale": {"domain": [0, 5]}},
+      "y": {"field": "Prevalence - Drug use disorders - Sex: Both - Age: Age-standardized (Percent)", 
+      "type": "quantitative",
+      "title":"Prevalence of Drug Use Disorders (%)"
+      },
+      "tooltip": [{"field": "Prevalence - Drug use disorders - Sex: Both - Age: Age-standardized (Percent)", "title": "Prevalence of Depressive disorders"},
+      {"field": "Prevalence - Alcohol use disorders - Sex: Both - Age: Age-standardized (Percent)", "title": "Prevalence of Alcohol Use disorders"},
+      {"field": "Entity", "title": "Country"}
+      ]
+    }
+  }
