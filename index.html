@@ -24,7 +24,7 @@
     <body>
         <div class="container">
             <span class="heading">
-				<h1 color=" #0c3f2e">Mental Health Around the World</h1>
+				<h1 style="color: #0c3f2e">Mental Health Disorders Around the World</h1>
 			</span>
 			</span>
 
@@ -45,6 +45,8 @@
 					It plays a large role in how we feel, think, and behave.
 					<b style="color: #0c3f2e"> 2.2 million Australians</b> have reported having a mental
 					health condition, according to the 2022 Australian Bureau of Statistics (ABS) data.
+				</div>
+
 				</div>
 			</div>
 
@@ -76,16 +78,51 @@
 					</div>
 				</div>
 
-				    
-            </div>
+				<div class="row">
+					<div class = "col-5">
+						<p
+						style="
+							margin-top: 100px;
+							text-align: justify;
+							text-justify: inter-word;
+							margin-right: 40px;
+						"
+					></p>
+					<h3> Strategies for mental </h3>
+					<hr />
+					<p>
+						test
+					</p>
+
+					<div class="col-7">
+						<div class="visualisation">
+							<div id="MHStrategiesbar" class="map"></div>
+						</div>
+					</div>
+
+	
+				</div>
+				
+
+
+            </div>MHStrategiesbar
 
 	<script type="text/javascript">
-	var spec2 = ".mentaldisorderbarchart.json";
+	var spec2 = "vega/mentaldisorderbarchart.json";
 	vegaEmbed("#mentaldisorderbarchart", spec2, { actions: false })
 		.then(function (result) {
 			// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 		})
 		.catch(console.error);
+	</script>
+
+	<script type="text/javascript">
+		var spec2 = "vega/MHStrategiesbar.json";
+		vegaEmbed("#barchart", spec2, { actions: false })
+			.then(function (result) {
+				// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+			})
+			.catch(console.error);
 	</script>
     </body>
 
