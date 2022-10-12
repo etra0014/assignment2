@@ -6,8 +6,21 @@ h1 {
     font-weight: 900;
 }
 
+h2 {
+    font-size: 25px;
+	padding-left: 20px;
+	background-color: #347e3e;
+	color: white;
+	font-weight: 400;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	text-align: center;
+    
+}
+
 body {
-    background-color: lightgray;
+    background-image: linear-gradient(rgb(147, 172, 145), #3b5e37);
 }
 
 .page {
