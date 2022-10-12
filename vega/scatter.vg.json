@@ -1,6 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/prevalence-by-mental-and-substance-use-disorder.csv"},
+    "title": "Relationship Between Alcohol Use and Drug Use Disorders Worldwide",
     "transform": [{"filter":"datum.Year == 2019"},
     {"filter":"datum.Year == 2019"}],
     "mark": "circle",
