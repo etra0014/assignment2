@@ -3,10 +3,10 @@ body *{
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 50px;
 	text-align: center;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 	z-index: 1;
 }
 
