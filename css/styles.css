@@ -49,19 +49,3 @@ h2 {
 p {
 	font-family: "Helvetica", Arial, Helvetica, sans-serif;
 }
-
-.description-right {
-    padding-left: 20px;
-}
-
-.description-left {
-    padding-right: 20px;
-}
-
-.pure-g {
-    margin-bottom: 40px;
-}
-
-.vis-container {
-    width: 100%;
-}
