@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Strategies used for Mental Health, by proportion (%) of Australians with Mental Disoders",
+    "title": "Strategies used for Mental Health",
     "data": {"url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/Strategies%20used%20for%20mental%20health%2C%202020-21.csv"},
     "height": {"step": 50},
     "mark": {"type": "bar", "yOffset": 5, "cornerRadiusEnd": 2, "height": {"band": 0.5}},
