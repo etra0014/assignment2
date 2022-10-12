@@ -40,21 +40,35 @@
     </div>
     <!-- end pure grid group -->
 
+
     
   <!-- pure grid group -->
   <div class="pure-g">
     <div class="pure-u-1-1">
-      <h2 style="color: #10533d">Prevalence of Mental Health disorders around the world</h2>
+      <h2 style="color: white">Prevalence of Mental Health disorders around the world</h2>
     </div>
   </div>
   <!-- end pure grid group -->
+
+
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <h3 style="color: rgb(34, 114, 60)">Prevalence of Anxiety disorders around the world 2019</h3>
+      <p> The WHO region with the highest prevalence is...</p>
+    </div>
+
+    <div class="pure-u-1-1">
+      <div id="vis3" class="vis-container"></div>
+    </div>
+  </div>
+
 
 
 
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h2 style="color: #10533d">Mental Health in Australia</h2>
+        <h2 style="color: white">Mental Health in Australia</h2>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -89,15 +103,16 @@
 
 
 
-
    
   </div> <!-- end page -->
 
   <script type="text/javascript">
     var specVis1 = "vega/mentaldisorderbarchart.vg.json";
     var specVis2 = "vega/MHStrategiesbar.vg.json";
+    var specVis3 = "vega/worldmapredo.vg.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
+    vegaEmbed('#vis3', specVis3, { "actions": false });
 
     vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
