@@ -24,11 +24,9 @@ h2 {
 }
 
 .container {
-	width: 70% !important;
+	width: 70%;
 	margin: 0 auto;
 
-	background-color: white;
-	padding-bottom: 100px;
 }
 
 .visualisation {
@@ -44,26 +42,26 @@ h2 {
 	height: 100%;
 }
 
-.scatterplot {
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-}
-
-.title-globe {
-	position: absolute;
-	width: 100px;
-	top: 0;
-	right: 0;
-	margin-right: 30%;
-	margin-top: 5%;
-	z-index: 0;
-}
-
 .sub-text {
 	font-size: larger;
 }
 
 p {
 	font-family: "Helvetica", Arial, Helvetica, sans-serif;
+}
+
+.description-right {
+    padding-left: 20px;
+}
+
+.description-left {
+    padding-right: 20px;
+}
+
+.pure-g {
+    margin-bottom: 40px;
+}
+
+.vis-container {
+    width: 100%;
 }
