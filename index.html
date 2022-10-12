@@ -69,10 +69,26 @@
                         </p>
 
 						<div class="visualisation">
-							<div id="mentaldisorderbarchart"></div>
+							<div id="mentaldisorderbarchart" class = "vis-container"></div>
 						</div>
 					</div>
 				</div>
+
+				    <!-- pure grid group -->
+					<div class="pure-g">
+						<div class="pure-u-1-2">
+						  <div class="description description-left">
+							<h2>Mental Health Strategies Used in Australia</h2>
+							<p> There are a variety of strategies to cope with a mental health disorder.
+								Among Australians that have mental health disorders, increasing the level of exercise and physical activity, as well practising positive thinking are 
+							among the top strategies used. Cutting out alcohol or drugs is the least prevalent strategy used. </p>
+						  </div>
+						</div>
+						<div class="pure-u-1-2">
+						  <div id="vis2" class="vis-container"></div>
+						</div>
+					  </div>
+					  <!-- end pure grid group -->
 
 
             </div>
@@ -87,6 +103,26 @@
 				})
 				.catch(console.error);
 		</script>
+
+<script type="text/javascript">
+    var specVis1 = "./normalised-stacked-bars-responsive.json";
+    var specVis2 = ".vega/MHStrategiesbar.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+</body>
     </body>
 
 </html>
