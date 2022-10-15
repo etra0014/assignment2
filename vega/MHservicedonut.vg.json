@@ -12,10 +12,8 @@
       "theta": {"field": "Proportion (%)(a)", "type": "quantitative"},
       "color": {"field": "Type of service", "type": "nominal",
       "scale": {"range": ["#7fc97f", "#beaed4", "#ffff99", "#a6cee3", "#fc8d62" ]
-        },
-        "legend": {
-          "orient":"bottom"
         }
+      
         },
         "tooltip" : [{"field" : "Type of service", "title": "Type of Service"},
           {"field" : "Proportion (%)(a)", "title": "Proportion of Population Using Service (%)"}]
