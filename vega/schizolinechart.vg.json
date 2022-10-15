@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Prevalence of Schizophrenia Worldwide Over Time",
-	"height": 200,
-	"width": 350,
+	"height": 300,
+	"width": 250,
     "data": {"url": "https://raw.githubusercontent.com/etra0014/FIT3179/main/WHO%20prevalence.csv"},
 	"params": [
 		{
@@ -20,12 +20,12 @@
 				],
 				"labels":[
 					"Show All", 
-					"Eastern Mediterranean Region (WHO)",
-					"African Region (WHO)",
-					"European Region (WHO)",
-					"Region of the Americas (WHO)",
-					"South-East Asia Region (WHO)",
-					"Western Pacific Region (WHO)"
+					"Eastern Mediterranean Region",
+					"African Region",
+					"European Region",
+					"Region of the Americas",
+					"South-East Asia Region",
+					"Western Pacific Region"
 				],
 				"name": "Region Selection"}
 
