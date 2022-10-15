@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Prevalence of Schizophrenia Worldwide Over Time",
+	"height": 200,
+	"width": 350,
     "data": {"url": "https://raw.githubusercontent.com/etra0014/FIT3179/main/WHO%20prevalence.csv"},
 	"params": [
 		{
@@ -70,7 +72,7 @@
         },
         "tooltip": [
           {"field": "Entity", "type": "nominal", "title": "WHO Region"},
-          {"field": "Prevalence - Schizophrenia - Sex: Both - Age: Age-standardized (Percent)", "type": "quantitative", "title": "Prevalence of Schizophrenia (age-standardised, %)"}
+          {"field": "Prevalence - Schizophrenia - Sex: Both - Age: Age-standardized (Percent)", "type": "quantitative", "format": ".2f", "title": "Prevalence of Schizophrenia (age-standardised, %)"}
         ]
       }
 		}

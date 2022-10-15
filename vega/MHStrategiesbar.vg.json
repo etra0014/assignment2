@@ -3,6 +3,7 @@
     "title": "Strategies used for Mental Health",
     "data": {"url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/Strategies%20used%20for%20mental%20health%2C%202020-21.csv"},
     "height": {"step": 50},
+    "width": 350,
     "params": [
       {
         "name": "highlight",
