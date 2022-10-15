@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Prevalnce of any long-term mental disoder",
+  "data": {"url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/12mthdisorder.csv"
+  },
+
+   "params": [
+  {
+    "name": "highlight",
+    "select": {"type": "point", "on": "mouseover"}
+  },
+  {"name": "select", "select": "point"}
+],
+
+
+  "mark": {"type":"bar",
+  "cursor": "pointer"},
+  "encoding": {
+    "x": {"field": "Age group"},
+    "y": {"field": "Prevalence", "type": "quantitative", "title" : "Prevalence (%)"},
+    "fillOpacity": {
+    "condition": {"param": "select", "value": 1},
+    "value": 0.3
+  },
+    "xOffset": {"field": "Sex"},
+    "color": {
+      "field": "Sex",
+      "scale": {"range": ["#fb9a99", "#1f78b4"]
+      },
+      "legend": {"orient": "top"}
+  },
+  
+  "tooltip": [
+    {"field": "Sex", "type": "nominal"},
+    {"field": "Age group", "type": "ordinal"},
+    {"field": "Prevalence", "type": "nominal", "title": "Prevalence (%)"}
+  ]
+}
+}
