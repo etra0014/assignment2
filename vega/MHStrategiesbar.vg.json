@@ -3,7 +3,14 @@
     "title": "Strategies used for Mental Health",
     "data": {"url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/Strategies%20used%20for%20mental%20health%2C%202020-21.csv"},
     "height": {"step": 50},
-    "mark": {"type": "bar", "yOffset": 5, "cornerRadiusEnd": 2, "height": {"band": 0.5}},
+    "params": [
+      {
+        "name": "highlight",
+        "select": {"type": "point", "on": "mouseover"}
+      },
+      {"name": "select", "select": "point"}
+    ],
+    "mark": {"type": "bar", "yOffset": 5, "cornerRadiusEnd": 2, "height": {"band": 0.5}, "cursor": "pointer"},
     "encoding": {
       "y": {
         "field": "Strategies used for mental health, 2020-21",
@@ -23,18 +30,28 @@
           "titleAlign": "left"
         }
       },
+      "fillOpacity": {
+        "condition": {"param": "select", "value": 1},
+        "value": 0.3
+      },
       "x": {
         "field": "Proportion",
         "type": "quantitative",
-        "title": "Proportion (%)"
+        "title": "Proportion (%)",
+        "scale": {"domain": [0, 40]}
       },
       "color": {
         "field": "Strategies used for mental health, 2020-21",
-        "title":"Strategy Used"
+        "title":"Strategy Used",
+        "scale": {"range": ["#8dd3c7", "#ffd92f", "#fc8d62", "#984ea3", "#80b1d3", "#fdb462", "#b3de69", 
+      "#e78ac3", "#a65628"]
+      },
+        "legend": false
       },
       "tooltip": [
         {"field" : "Strategies used for mental health, 2020-21", "title": "Strategy Used"},
         {"field" : "Proportion", "title": "Proportion (%)"}
       ]
     }
+    
   }
