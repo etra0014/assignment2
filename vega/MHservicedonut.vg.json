@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title":"Types of Mental Health Services Used in by the Australian Population 2011",
     "description": "A simple donut chart with embedded data.",
-    "height": 400,
-    "width": 250,
+    "height": 300,
+    "width": 200,
     "data": {
       "url": "https://raw.githubusercontent.com/etra0014/assignment2/main/data/People%20who%20used%20at%20least%20one%20MBS%20subsidised%20mental%20health-related%20service%20in%202011%2C%20type%20of%20service.csv"
     },
@@ -11,7 +11,7 @@
     "encoding": {
       "theta": {"field": "Proportion (%)(a)", "type": "quantitative"},
       "color": {"field": "Type of service", "type": "nominal",
-      "scale": {"range": ["#7fc97f", "#beaed4", "#ffff99", "#a6cee3", "#fc8d62" ]
+      "scale": {"range": ["#7fc97f", "#beaed4", "#f781bf", "#a6cee3", "#fc8d62" ]
         }
       
         },
