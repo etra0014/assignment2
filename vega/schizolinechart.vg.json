@@ -45,7 +45,27 @@
 	  "type": "quantitative", 
 	  "title": "Prevalence of Schizophrenia (%)",
 	  "scale": {"domain": [0.2, 0.4]}},
-      "color": {"field": "Entity", "type": "nominal", "title": "Region"
+      "color": {"field": "Entity", 
+	  "type": "nominal", 
+	  "title": "Region",
+	  "scale": {
+		"domain": [
+			"Eastern Mediterranean Region (WHO)",
+			"African Region (WHO)",
+			"European Region (WHO)",
+			"Region of the Americas (WHO)",
+			"South-East Asia Region (WHO)",
+			"Western Pacific Region (WHO)"
+		],
+		"range": [
+		"#e41a1c",
+		"#984ea3",
+		"#ff7f00",
+		"#a6cee3",
+		"#377eb8",
+		"#a65628"
+		]
+		}
 	}
     },
 	"layer": [
