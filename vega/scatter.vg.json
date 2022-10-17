@@ -16,7 +16,7 @@
   }
 ],
   "transform": [{"filter": "datum.Year == year_selected" }],
-  "mark": "circle",
+  "mark": {"type":"circle", "color": "rgb(115, 155, 120)"},
   "encoding": {
     "x": {"field": "Prevalence - Alcohol use disorders - Sex: Both - Age: Age-standardized (Percent)", 
     "type": "quantitative",
@@ -26,6 +26,7 @@
     "type": "quantitative",
     "title":"Prevalence of Drug Use Disorders (%)"
     },
+
 
     "tooltip": [{"field": "Prevalence - Drug use disorders - Sex: Both - Age: Age-standardized (Percent)", "title": "Prevalence of Depressive disorders"},
     {"field": "Prevalence - Alcohol use disorders - Sex: Both - Age: Age-standardized (Percent)", "format": ".2f", "title": "Prevalence of Alcohol Use disorders"},
